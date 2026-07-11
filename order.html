@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery & Beverage Order Form</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Grocery & Beverage Order Form</h2>
+
+Customer Name:
+<input type="text" id="name"><br><br>
+
+<table>
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td>Rice (1 kg)</td>
+<td>₹60</td>
+<td>
+<button onclick="changeQty('rice',-1)">-</button>
+<input type="text" id="rice" value="0" size="2" readonly>
+<button onclick="changeQty('rice',1)">+</button>
+</td>
+<td id="riceTotal">₹0</td>
+</tr>
+
+<tr>
+<td>Milk (1 L)</td>
+<td>₹30</td>
+<td>
+<button onclick="changeQty('milk',-1)">-</button>
+<input type="text" id="milk" value="0" size="2" readonly>
+<button onclick="changeQty('milk',1)">+</button>
+</td>
+<td id="milkTotal">₹0</td>
+</tr>
+
+<tr>
+<td>Bread</td>
+<td>₹40</td>
+<td>
+<button onclick="changeQty('bread',-1)">-</button>
+<input type="text" id="bread" value="0" size="2" readonly>
+<button onclick="changeQty('bread',1)">+</button>
+</td>
+<td id="breadTotal">₹0</td>
+</tr>
+
+<tr>
+<td>Tea Powder</td>
+<td>₹120</td>
+<td>
+<button onclick="changeQty('tea',-1)">-</button>
+<input type="text" id="tea" value="0" size="2" readonly>
+<button onclick="changeQty('tea',1)">+</button>
+</td>
+<td id="teaTotal">₹0</td>
+</tr>
+
+<tr>
+<td>Cold Drink</td>
+<td>₹50</td>
+<td>
+<button onclick="changeQty('drink',-1)">-</button>
+<input type="text" id="drink" value="0" size="2" readonly>
+<button onclick="changeQty('drink',1)">+</button>
+</td>
+<td id="drinkTotal">₹0</td>
+</tr>
+
+</table>
+
+<br>
+
+<h3 id="grandTotal">Grand Total : ₹0</h3>
+
+<button onclick="summary()">Generate Order Summary</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="./js/mai.js"> </script>
+
+</body>
+</html>
